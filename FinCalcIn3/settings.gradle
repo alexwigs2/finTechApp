@@ -1,0 +1,2 @@
+rootProject.name = "FinCalcIn"
+include ':app'
