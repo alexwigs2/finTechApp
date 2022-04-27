@@ -3,6 +3,7 @@ package com.example.fincalcin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class PaymentResults : AppCompatActivity() {
@@ -13,6 +14,15 @@ class PaymentResults : AppCompatActivity() {
         //val button = findViewById<Button>(R.id.button)
 
         val button2 = findViewById<Button>(R.id.button2)
+
+        //total label
+        val total = findViewById<TextView>(R.id.textView4)
+
+        //get t from main activity
+        val pro=intent.getStringExtra("t")
+
+        //set t to label text
+        total.text = pro
 
         setListeners(button2)
     }

@@ -76,6 +76,7 @@
         android:layout_marginTop="65dp"
         android:background="@drawable/my_button_b"
         android:text="Recalculate"
+        android:fontFamily="@font/comic_neue_bold"
         android:textAllCaps="false"
         android:textColor="#0013FF"
         android:textSize="30sp"

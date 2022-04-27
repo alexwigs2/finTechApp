@@ -21,6 +21,7 @@
         <activity android:name=".Results" />
         <activity android:name=".Payment" />
         <activity android:name=".PaymentResults" />
+        <activity android:name=".PresResults" />
 
         <meta-data
             android:name="preloaded_fonts"

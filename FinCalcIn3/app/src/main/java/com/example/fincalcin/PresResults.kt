@@ -6,14 +6,13 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class Results : AppCompatActivity() {
+class PresResults : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.results)
+        setContentView(R.layout.pres_results)
 
         //val button = findViewById<Button>(R.id.button)
 
-        //recalculate button
         val button2 = findViewById<Button>(R.id.button2)
 
         //total label

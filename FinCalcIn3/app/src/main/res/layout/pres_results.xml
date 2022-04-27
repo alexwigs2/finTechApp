@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/comic_neue_bold"
-        android:text="Future Value"
+        android:text="Present Value"
         android:textAlignment="center"
         android:textColor="#D3D3D3"
         android:textSize="34sp"
