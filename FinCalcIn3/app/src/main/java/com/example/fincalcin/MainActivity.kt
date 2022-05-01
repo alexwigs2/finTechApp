@@ -66,11 +66,6 @@ class MainActivity : AppCompatActivity() {
         //HAVE TO CREATE T HERE
         var t = 8.0
 
-        //CHECK IF NULL
-        if(dfield.text.isEmpty() || ifield.text == null || pfield.text == null || yfield.text == null) {
-            t = 0.0
-        }
-
         //THIS IS WHERE I NEED TO GET T AND SEND IT OVER TO RESULTS.
 
         //val i = Intent(this, Results::class.java)
@@ -121,19 +116,47 @@ class MainActivity : AppCompatActivity() {
             frText.text = "Payment Frequency"
 
             //deselect future value button and select payment button.
-            futbut.setTextColor(Color.parseColor("#0013FF"))
-            futbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            futbut.setTextColor(Color.parseColor("#2224FF"))
+            futbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect present value button and select payment button.
-            presbut.setTextColor(Color.parseColor("#0013FF"))
-            presbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            presbut.setTextColor(Color.parseColor("#2224FF"))
+            presbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select payment value
-            but.setTextColor(Color.parseColor("#00FFF7"))
-            but.setBackgroundColor(Color.parseColor("#0013FF"))
+            but.setTextColor(Color.parseColor("#AFFFFA"))
+            but.setBackgroundColor(Color.parseColor("#2224FF"))
 
-            t = 12.0
-            Log.i("t is ",t.toString())
+
+            //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF payment.
+
+            //calculates based off of payment selection for years
+
+            if (but.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                //calculates based off of month selection
+                if (mbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Month Button Clicked in payment", Toast.LENGTH_LONG)
+                        .show()
+
+                    t = 12.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF MONTH.
+
+                }
+
+                if (ybut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in payment", Toast.LENGTH_LONG).show()
+
+                    t = 124.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF year.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR PAYMENT
+
+                }
+
+            }
 
             //startActivity(myIntent)
         }
@@ -148,16 +171,47 @@ class MainActivity : AppCompatActivity() {
             frText.text = "Compound Frequency"
 
             //deselect future value button and select payment button.
-            but.setTextColor(Color.parseColor("#0013FF"))
-            but.setBackgroundColor(Color.parseColor("#00FFF7"))
+            but.setTextColor(Color.parseColor("#2224FF"))
+            but.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect present value button and select future button.
-            presbut.setTextColor(Color.parseColor("#0013FF"))
-            presbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            presbut.setTextColor(Color.parseColor("#2224FF"))
+            presbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select future value
-            futbut.setTextColor(Color.parseColor("#00FFF7"))
-            futbut.setBackgroundColor(Color.parseColor("#0013FF"))
+            futbut.setTextColor(Color.parseColor("#AFFFFA"))
+            futbut.setBackgroundColor(Color.parseColor("#2224FF"))
+
+            //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF future value.
+
+            //calculates based off of future value selection for years
+
+            if (futbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                //calculates based off of month selection
+                if (mbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Month Button Clicked in payment", Toast.LENGTH_LONG)
+                        .show()
+
+                    t = 12.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF MONTH.
+
+                }
+
+                if (ybut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in payment", Toast.LENGTH_LONG).show()
+
+                    t = 2324.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF year.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR FUTURE VALUE
+
+                }
+
+            }
+
 
             //startActivity(myIntent)
         }
@@ -171,16 +225,46 @@ class MainActivity : AppCompatActivity() {
             frText.text = "Compound Frequency"
 
             //deselect future value button and select present value button.
-            futbut.setTextColor(Color.parseColor("#0013FF"))
-            futbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            futbut.setTextColor(Color.parseColor("#2224FF"))
+            futbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect payment value button and select present value button.
-            but.setTextColor(Color.parseColor("#0013FF"))
-            but.setBackgroundColor(Color.parseColor("#00FFF7"))
+            but.setTextColor(Color.parseColor("#2224FF"))
+            but.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select present button value
-            presbut.setTextColor(Color.parseColor("#00FFF7"))
-            presbut.setBackgroundColor(Color.parseColor("#0013FF"))
+            presbut.setTextColor(Color.parseColor("#AFFFFA"))
+            presbut.setBackgroundColor(Color.parseColor("#2224FF"))
+
+            //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF present value.
+
+            //calculates based off of future value selection for years
+
+            if (presbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                //calculates based off of month selection
+                if (mbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Month Button Clicked in payment", Toast.LENGTH_LONG)
+                        .show()
+
+                    t = 12.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF MONTH.
+
+                }
+
+                if (ybut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in payment", Toast.LENGTH_LONG).show()
+
+                    t = 12489.0267246642
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF year.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR PRESENT VALUE
+
+                }
+
+            }
 
             //startActivity(myIntent)
         }
@@ -190,18 +274,18 @@ class MainActivity : AppCompatActivity() {
             //val myIntent = Intent(this, Payment::class.java)
 
             //deselect semi value button and select month button.
-            sbut.setTextColor(Color.parseColor("#0013FF"))
-            sbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            sbut.setTextColor(Color.parseColor("#2224FF"))
+            sbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect yearly value button and select month button.
-            ybut.setTextColor(Color.parseColor("#0013FF"))
-            ybut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            ybut.setTextColor(Color.parseColor("#2224FF"))
+            ybut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select month value
-            mbut.setTextColor(Color.parseColor("#00FFF7"))
-            mbut.setBackgroundColor(Color.parseColor("#0013FF"))
+            mbut.setTextColor(Color.parseColor("#AFFFFA"))
+            mbut.setBackgroundColor(Color.parseColor("#2224FF"))
 
-            if (mbut.currentTextColor == (Color.parseColor("#00FFF7"))) {
+            if (mbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
 
                 Toast.makeText(this, "Month Button Clicked", Toast.LENGTH_LONG).show()
 
@@ -217,27 +301,58 @@ class MainActivity : AppCompatActivity() {
             //val myIntent = Intent(this, Payment::class.java)
 
             //deselect semi value button and select year button.
-            sbut.setTextColor(Color.parseColor("#0013FF"))
-            sbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            sbut.setTextColor(Color.parseColor("#2224FF"))
+            sbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect month value button and select year button.
-            mbut.setTextColor(Color.parseColor("#0013FF"))
-            mbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            mbut.setTextColor(Color.parseColor("#2224FF"))
+            mbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select year value
-            ybut.setTextColor(Color.parseColor("#00FFF7"))
-            ybut.setBackgroundColor(Color.parseColor("#0013FF"))
+            ybut.setTextColor(Color.parseColor("#AFFFFA"))
+            ybut.setBackgroundColor(Color.parseColor("#2224FF"))
 
 
-            if (ybut.currentTextColor == (Color.parseColor("#00FFF7"))) {
+            if (ybut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
 
-                Toast.makeText(this, "Year Button Clicked", Toast.LENGTH_LONG).show()
+                //Toast.makeText(this, "Year Button Clicked", Toast.LENGTH_LONG).show()
 
                 //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF YEAR.
 
-                //CHECK IF NULL
-                if(dfield.text == null || ifield.text == null || pfield.text == null || yfield.text == null) {
-                    t = 0.0
+                //calculates based off of payment selection for years
+                if (but.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in payment", Toast.LENGTH_LONG).show()
+
+                    t = 124.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF YEARS.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR PAYMENT
+
+                }
+
+                //calculates based off of future value selection for years
+                if (futbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in future value", Toast.LENGTH_LONG).show()
+
+                    t = 2324.0
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF YEARS.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR FUTURE VALUE
+
+                }
+
+                //calculates based off of present value selection for years
+                if (presbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
+
+                    Toast.makeText(this, "Year Button Clicked in present value", Toast.LENGTH_LONG).show()
+
+                    t = 12489.0267246642
+                    //THIS IS WHERE I HAVE TO CALCULATE T BASED OFF OF YEARS.
+
+                    //THIS IS WHERE WHILE LOOP WILL GO AND CALCULATE BASED ON YEARS FOR PRESENT VALUE
+
                 }
 
             }
@@ -250,18 +365,18 @@ class MainActivity : AppCompatActivity() {
             //val myIntent = Intent(this, Payment::class.java)
 
             //deselect year value button and select semi button.
-            ybut.setTextColor(Color.parseColor("#0013FF"))
-            ybut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            ybut.setTextColor(Color.parseColor("#2224FF"))
+            ybut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //deselect month value button and select semi button.
-            mbut.setTextColor(Color.parseColor("#0013FF"))
-            mbut.setBackgroundColor(Color.parseColor("#00FFF7"))
+            mbut.setTextColor(Color.parseColor("#2224FF"))
+            mbut.setBackgroundColor(Color.parseColor("#AFFFFA"))
 
             //select semi value
-            sbut.setTextColor(Color.parseColor("#00FFF7"))
-            sbut.setBackgroundColor(Color.parseColor("#0013FF"))
+            sbut.setTextColor(Color.parseColor("#AFFFFA"))
+            sbut.setBackgroundColor(Color.parseColor("#2224FF"))
 
-            if (sbut.currentTextColor == (Color.parseColor("#00FFF7"))) {
+            if (sbut.currentTextColor == (Color.parseColor("#AFFFFA"))) {
 
                 Toast.makeText(this, "Semi Button Clicked", Toast.LENGTH_LONG).show()
 
@@ -272,24 +387,29 @@ class MainActivity : AppCompatActivity() {
             //startActivity(myIntent)
         }
 
+        //calculate button listener
         cal.setOnClickListener{
-
-            //cast t to a string
-            val tstring = t.toString()
-
-            if (lab.text == "Deposit") {
-                val myIntent = Intent(this, Results::class.java)
-                myIntent.putExtra("t",tstring)
-                startActivity(myIntent)
-            } else if (lab.text == "Down Payment") {
-                val myIntent = Intent(this, PaymentResults::class.java)
-                myIntent.putExtra("t",tstring)
-                startActivity(myIntent)
-            } else {
-                val myIntent = Intent(this, PresResults::class.java)
-                myIntent.putExtra("t",tstring)
-                startActivity(myIntent)
+            //CHECK IF NULL
+            if(dfield.text.isEmpty() || ifield.text.isEmpty() || pfield.text.isEmpty() || yfield.text.isEmpty()) {
+                t = 0.00
+                Log.i("field is empty", t.toString())
             }
+                //cast t to a string
+                val tstring = "$" + "%.2f".format(t)
+
+                if (lab.text == "Deposit") {
+                    val myIntent = Intent(this, Results::class.java)
+                    myIntent.putExtra("t", tstring)
+                    startActivity(myIntent)
+                } else if (lab.text == "Down Payment") {
+                    val myIntent = Intent(this, PaymentResults::class.java)
+                    myIntent.putExtra("t", tstring)
+                    startActivity(myIntent)
+                } else {
+                    val myIntent = Intent(this, PresResults::class.java)
+                    myIntent.putExtra("t", tstring)
+                    startActivity(myIntent)
+                }
 
 
         }
